@@ -29,6 +29,7 @@ int main() {
                 break;
             default:
                 printf("Opción no valida");
+                break;
         }
     } while(opcion != 4);
     return 0;
