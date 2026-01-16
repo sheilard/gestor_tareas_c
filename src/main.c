@@ -11,7 +11,7 @@ int main() {
         printf("2.Listar Tareas\n");
         printf("3.Borrar Tarea\n");
         printf("4.Salir\n");
-        printf("Que opcion quiere?:\t ");
+        printf("Que opcion quiere?:\n ");
         scanf("%d",&opcion);
 
         switch (opcion) {

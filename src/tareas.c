@@ -12,14 +12,14 @@ void anadirTarea() {
     }
     Tarea t;
     t.id = numTareas + 1;
-    printf("Introduce la tarea:\t");
+    printf("Introduce la tarea:\n");
     getchar();
     fgets(t.titulo,100,stdin);
     t.titulo[strcspn(t.titulo,"\n")] = '\0';
 
     tareas[numTareas] = t;
     numTareas++;
-    printf("Tarea añadida.\n");
+    printf("Tarea anadida.\n");
 }
 
 void borrarTarea() {
@@ -28,7 +28,7 @@ void borrarTarea() {
     printf("Introduce la tarea:\n");
     getchar();
     fgets(t.titulo,100,stdin);
-    t.titulo[strcspn(t.titulo,"\t")] = '\0';
+    t.titulo[strcspn(t.titulo,"\n")] = '\0';
 
     for (int i = 0; i < numTareas; i++) {
         if (strcmp(tareas[i].titulo,t.titulo) == 0) {
@@ -41,7 +41,6 @@ void borrarTarea() {
             break;
         }
     }
-
     if (!encontrado) {
         printf("No se encontro la tarea.\n");
     }
